@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Selector and Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="input-group">
+            <label for="situation">Situation (max 50 characters):</label>
+            <input type="text" id="situation" maxlength="50">
+        </div>
+
+        <div class="input-group">
+            <label for="music-folder">Select Music Folder:</label>
+            <input type="file" id="music-folder" webkitdirectory directory multiple>
+            <p id="music-file-name">No file selected</p>
+        </div>
+
+        <div class="input-group">
+            <label for="ambient-folder">Select Ambient Sound Folder:</label>
+            <input type="file" id="ambient-folder" webkitdirectory directory multiple>
+            <p id="ambient-file-name">No file selected</p>
+        </div>
+
+        <div class="slider-group">
+            <label for="music-volume">Music Volume:</label>
+            <input type="range" id="music-volume" min="0" max="1" step="0.01" value="0.5">
+        </div>
+
+        <div class="slider-group">
+            <label for="ambient-volume">Ambient Sound Volume:</label>
+            <input type="range" id="ambient-volume" min="0" max="1" step="0.01" value="0.5">
+        </div>
+
+        <button id="select-button">Select</button>
+        <button id="play-button" disabled>Play</button>
+        <button id="stop-button" disabled>Stop</button>
+        <button id="clear-button">Clear</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
